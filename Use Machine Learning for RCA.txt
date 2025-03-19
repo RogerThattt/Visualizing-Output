@@ -1,0 +1,20 @@
+🤖 4. Use Machine Learning for RCA
+Leverage Spark MLlib to detect hidden patterns:
+
+python
+CopyEdit
+from pyspark.ml.feature import VectorAssembler
+from pyspark.ml.clustering import KMeans
+
+features = VectorAssembler(inputCols=["OrderAmount", "RetryCount"], outputCol="features")
+dataset = features.transform(root_df)
+
+kmeans = KMeans(k=3, seed=1)
+model = kmeans.fit(dataset)
+clusters = model.transform(dataset)
+display(clusters)
+✅ Cluster fallouts into groups like:
+
+High-value orders failing
+Repeat retries leading to failures
+System-specific error clusters
