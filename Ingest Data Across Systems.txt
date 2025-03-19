@@ -1,0 +1,6 @@
+fallout_df = spark.read.parquet("/mnt/fallout_data/")
+order_df = spark.read.parquet("/mnt/orders/")
+inventory_df = spark.read.parquet("/mnt/inventory/")
+
+root_df = fallout_df.join(order_df, "OrderID", "left") \
+                    .join(inventory_df, "OrderID", "left")
