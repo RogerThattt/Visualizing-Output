@@ -1,0 +1,10 @@
+🗺 6. Visualize RCA Insights
+✅ Heatmaps: Fallout by system and reason
+✅ Sankey diagrams: Flow of orders to fallout reasons
+✅ Bar charts: Top 5 recurring fallout reasons
+✅ Time-series: Fallout trends with annotations of releases/patches
+
+python
+Copy
+Edit
+display(root_df.groupBy("SourceSystem", "RCA_Category").count())
