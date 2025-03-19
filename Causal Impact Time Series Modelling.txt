@@ -1,0 +1,13 @@
+🔍 5. Causal Impact / Time Series Modeling
+Detect fallout spikes post-system changes/releases:
+
+Load deployment logs or change management data
+Overlay with fallout trend charts
+Use statsmodels or causal impact libraries
+python
+Copy
+Edit
+# Example with statsmodels
+from statsmodels.tsa.seasonal import seasonal_decompose
+decompose_result = seasonal_decompose(fallout_counts, model="additive")
+decompose_result.plot()
