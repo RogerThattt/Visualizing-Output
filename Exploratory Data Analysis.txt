@@ -1,0 +1,13 @@
+📊 3. Exploratory Data Analysis (EDA)
+Start looking for patterns and correlations:
+
+python
+Copy
+Edit
+display(root_df.groupBy("RCA_Category").count())
+Examples:
+✅ Orders by fallout reason
+✅ Fallouts by product or offer
+✅ OSS system contribution to fallout
+✅ Time-based trends (spikes after releases)
+

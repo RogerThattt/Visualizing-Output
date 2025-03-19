@@ -1,0 +1,20 @@
+2. Categorize Fallouts for RCA
+Use rule-based or ML-driven classification:
+
+python
+Copy
+Edit
+from pyspark.sql.functions import when
+
+root_df = root_df.withColumn(
+    "RCA_Category",
+    when(root_df.FalloutReason.contains("Inventory"), "Process - Inventory")
+    .when(root_df.FalloutReason.contains("Address"), "Data - Customer Info")
+    .when(root_df.SourceSystem == "Middleware", "Technology - Integration")
+    .otherwise("Unknown")
+)
+✅ Categories:
+
+Process (e.g., missing inventory, manual error)
+Data (e.g., bad address, incorrect product config)
+Technology (e.g., API timeouts, integration failures)
