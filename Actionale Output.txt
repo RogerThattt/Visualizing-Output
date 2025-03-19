@@ -1,0 +1,20 @@
+🚀 7. Actionable Output
+Generate RCA reports for:
+
+Operations teams
+Product managers
+IT for system-level issues
+✅ Write back findings to Delta tables
+✅ Expose via Power BI/Tableau/Databricks dashboards
+
+🔮 Example RCA Finding
+RCA Category	% of Fallouts	Suggested Fix
+Data - Address Mismatch	30%	Improve address validation in CRM
+Process - Inventory	25%	Real-time inventory sync
+Tech - API Timeout	20%	Increase timeout, retry logic
+✅ Summary - Why Databricks for RCA?
+✔ Handles massive fallout datasets from multiple systems
+✔ Spark MLlib/AI for clustering, pattern detection
+✔ Time-series analysis for spike detection
+✔ Visual dashboards for easy consumption
+✔ Actionable, exportable insights
